@@ -1,0 +1,15 @@
+{
+  "name": "batchcodegen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nishant Kumar Giri",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
