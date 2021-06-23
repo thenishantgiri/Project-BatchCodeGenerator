@@ -52,6 +52,22 @@ app.post("/batchcode", async (req, res) => {
   }
 });
 
+// if we receive a get request to '/batches' location, call the below async function
+app.get("/batches", async (req, res) => {
+  try {
+    const batches = await Batch.findAll({
+      include: [Course, Season, Center]
+    });
+
+    // printing every batch of Node console
+    batches.forEach((b) => console.log(JSON.stringify(b)));
+
+    res.render("batches", { batches });
+  } catch (err) {
+    console.error(err);
+  }
+});
+
 // exporting the server, to be required by run.js
 module.exports = {
   app
