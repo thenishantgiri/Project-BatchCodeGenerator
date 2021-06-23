@@ -5,6 +5,7 @@ const db = new Sequelize("batchcodegen", "thenishantgiri", "admin", {
   dialect: "mysql"
 });
 
+// establishing connection with database
 db.authenticate()
   .then(() => console.log("connection successful"))
   .catch((err) => console.error(err));
