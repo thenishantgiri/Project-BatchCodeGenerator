@@ -68,5 +68,6 @@ module.exports = {
   Course,
   Teacher,
   Center,
-  Season
+  Season,
+  Batch
 };

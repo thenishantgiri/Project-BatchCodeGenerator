@@ -1,10 +1,12 @@
-const { db, Center, Season, Batch, Course, Teacher } = require("../model");
+const { db, Center, Season, Batch, Course, Teacher } = require("./model");
 
+// async function : creating bulk values in respective tables
 const seed = async () => {
   try {
+    // syncing database
     db.sync({ alter: true });
 
-    // creating values for center table
+    // creating values for centers table
     await Center.bulkCreate(
       [
         { id: "PP", name: "Pitampura", city: "New Delhi" },
@@ -18,6 +20,7 @@ const seed = async () => {
       }
     );
 
+    // creating values for seasons table
     await Season.bulkCreate(
       [
         { id: "S", name: "Summer" },
@@ -30,13 +33,14 @@ const seed = async () => {
       }
     );
 
+    // creating values for courses table
     await Course.bulkCreate(
       [
         { id: "LP", name: "Launchpad" },
         { id: "CX", name: "Crux" },
         { id: "IB", name: "Interview Bootcamp" },
         { id: "AD", name: "Android Development" },
-        { id: "WB", name: "Web Development (NodeJS)" }
+        { id: "WD", name: "Web Development (NodeJS)" }
       ],
       {
         ignoreDuplicates: true
@@ -47,4 +51,5 @@ const seed = async () => {
   }
 };
 
+// function call
 seed();
