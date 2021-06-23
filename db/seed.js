@@ -13,7 +13,8 @@ const seed = async () => {
         { id: "DW", name: "Dwarka", city: "New Delhi" },
         { id: "NO", name: "Noida", city: "New Delhi" },
         { id: "DD", name: "Dehradun", city: "Dehradun" },
-        { id: "OL", name: "Online", city: "New Delhi" }
+        { id: "OL", name: "Online", city: "New Delhi" },
+        { id: "LV", name: "Live Batch", city: "New Delhi" }
       ],
       {
         ignoreDuplicates: true

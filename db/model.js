@@ -6,7 +6,7 @@ const Course = db.define("course", {
     type: DataTypes.STRING(2),
     primaryKey: true
   },
-  name: DataTypes.STRING(20)
+  name: DataTypes.STRING(40)
 });
 
 const Teacher = db.define("teacher", {
